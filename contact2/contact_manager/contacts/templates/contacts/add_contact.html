@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Add Contact</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <h1>Add Contact</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="add-btn">Save Contact</button>
+    </form>
+    <a href="{% url 'home' %}" class="back-btn">⬅ Back</a>
+</body>
+</html>

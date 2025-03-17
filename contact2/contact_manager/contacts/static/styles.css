@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    color: white;
+}
+
+input, textarea {
+    width: 90%;
+    padding: 8px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+button, a {
+    display: inline-block;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.add-btn { background: green; }
+.send-btn { background: blue; }
+.delete-btn { background: red; }
+.back-btn { background: gray; }
+
+table {
+    width: 80%;
+    margin: auto;
+    border-collapse: collapse;
+    background: white;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid black;
+}

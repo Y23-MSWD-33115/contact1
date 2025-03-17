@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Contact Manager</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <h1>Business Contact Manager</h1>
+    <form method="GET">
+        <input type="text" name="query" placeholder="Search by name or email..." value="{{ query }}">
+        <button type="submit">Search</button>
+    </form>
+    <a href="{% url 'add_contact' %}" class="add-btn">+ Add Contact</a>
+
+    <table>
+        <tr>
+            <th>Name</th><th>Email</th><th>Phone</th><th>Address</th><th>Actions</th>
+        </tr>
+        {% for contact in contacts %}
+        <tr>
+            <td>{{ contact.name }}</td>
+            <td>{{ contact.email }}</td>
+            <td>{{ contact.phone }}</td>
+            <td>{{ contact.address }}</td>
+            <td>
+                <a href="{% url 'send_email' contact.email %}" class="send-btn">📧 Send Email</a>
+                <a href="{% url 'delete_contact' contact.email %}" class="delete-btn">❌ Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
